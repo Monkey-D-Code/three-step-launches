@@ -17,7 +17,7 @@
     "username": "victorpramanik",
     "password": "iworkindotnet@2020",
     "database": "three_step_launches",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   }
 }

@@ -79,7 +79,7 @@ app.use((req,res,next)=>{
 });
 
 // starting the express server
-db.sequelize.sync({force:false})
+db.sequelize.sync({force:true})
     .then(()=>{
         app.listen(port , ()=>{
             console.log(`Three step launchers server started at port ${port}`);
