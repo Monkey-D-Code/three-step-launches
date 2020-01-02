@@ -1,0 +1,29 @@
+.field-errors{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    .single-error{
+        background-color: $bg_color_warning;
+        padding : 0.6em 0.8em;
+        margin : 0.4em 0;
+        margin-right: 0.5em;
+        &:last-child{
+            margin-right:  0;
+        }
+        width: fit-content;
+        width : 300px;
+        h4{
+            text-transform: uppercase;
+            font-family: $heading_font;
+            color : $font_light;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+            font-weight: 200;
+        }
+        p{
+            color : darken($font_light,10%);
+        }
+    }
+}

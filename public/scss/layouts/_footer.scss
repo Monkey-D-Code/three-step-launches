@@ -1,0 +1,42 @@
+footer{
+    margin-top : 1em;
+    width: 100%;
+    padding : 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    text-align: center;
+    div{
+        margin : 1em 0;
+        width : 300px;
+        h2{
+            color: white;
+            letter-spacing: 1px;
+        }
+        p{
+            color: $font_light;
+        }
+        ul{
+            li{
+                list-style-type: none;
+                margin : 0.3em 0;
+                a{
+                    font-family: $para_font;
+                }
+            }
+        }
+    }
+    .brand-info{
+        img{
+            height: 150px;
+            width : 150px;
+            object-fit: cover;
+        }
+    }
+
+}

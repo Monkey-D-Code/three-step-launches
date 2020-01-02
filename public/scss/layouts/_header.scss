@@ -1,0 +1,102 @@
+header{
+    min-height: 90vh;
+    @media (max-width : 1024px){
+        min-height : 60vh;
+    }
+    @media (max-width : 420px){
+        min-height: 100vh;
+    }
+    @media (max-width : 320px){
+        min-height: 110vh;
+    }
+    width : 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    nav{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding : 2em;
+        .brand{
+            width : 40%;
+            h1{
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+        .menu{
+            width : 50%;
+            @media (max-width : 768px){
+                display: none;
+            }
+            ul{
+                list-style-type: none;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-family: $para_font;
+                    }
+                    margin : 0 1em;
+                    padding : 0.4em 0.8em;
+                    border : 2px solid transparent;
+                    border-radius: 3px;
+                    transition: all 0.3s;
+                    &:hover{
+                        border : 2px solid white;
+                    }
+                }
+            }
+        }
+    }
+    .hero-area{
+        width : 80%;
+        margin : 0 auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: baseline;
+        align-items: flex-start;
+        position: absolute;
+        top : 50%;
+        left : 10%;
+       
+        transform: translateY(-50%);
+        @media (max-width : 768px) {
+            transform: translateY(-45%);
+        }
+        @media (max-width : 375px) {
+            transform: translateY(-35%);
+        }
+        h1{
+            font-size: 3em;
+            @media (max-width : 420px){
+                font-size: 2.5em;
+            }
+            color: white;
+        }
+        p{
+            font-size: 1.2em;
+            @media (max-width : 420px){
+                font-size: 1em;
+            }
+            color: darken(white, 20%);
+            margin : 0.3em 0;
+        }
+        .link-btn{
+            padding : 1em 2em;
+            border-radius: 4px;    
+            text-decoration: none;
+            font-weight: bold;
+            font-family: $para_font;
+            color : $bg_color_2;
+            background-color: white;
+            margin-top : 0.8em;
+        }
+    }
+}

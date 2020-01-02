@@ -1,0 +1,35 @@
+ <section class="hero-area">
+        <div class="method-form">
+            <h1>How it works | {{#if fromCreate}}Add new Item{{/if}}{{#if fromUpdate}}Update{{/if}}</h1>
+            <p>Fill in the details</p>
+            {{#if fieldErrors}}
+                <div class="field-errors">
+                    {{#each fieldErrors.errors}}
+                        <div class="single-error">
+                            <h4>{{this.param}}</h4>
+                            <p>{{this.msg}}</p>
+                        </div>
+                        
+                    {{/each}}
+                </div>
+            {{/if}}
+            
+        </div>
+        
+    </header>
+</section>
+
+<section class="method-form">
+    <form method="POST" to='{{#if fromCreate}}/method/create{{/if}}{{#if fromUpdate}}/method/{{method.id}}/update{{/if}}' novalidate>
+        <div class="form-group">
+            <h4>Information</h4>
+            <input type="text" name="title" id="" placeholder="Give a title" value="{{method.title}}">
+        
+            <input type="url" name="image_url" id="" placeholder="Paste an Image Link" value={{method.image_url}}>
+            <textarea class='text-field' name="description" cols="30" rows="10" placeholder="Write about the item">{{method.description}}</textarea>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+            <button type="submit" class='button-2'><i class="fa fa-floppy-o" aria-hidden="true"></i> {{#if fromCreate}}Create{{/if}}{{#if fromUpdate}}Update{{/if}}</button>
+        </div>
+                
+    </form>
+</section>

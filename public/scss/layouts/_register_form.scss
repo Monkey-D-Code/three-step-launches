@@ -1,0 +1,13 @@
+.register-form{
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        input {
+            @include siteInput;
+        }
+
+        button {
+            @include btnPrimary;
+        }
+    }
+}

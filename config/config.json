@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "three-step-launchers",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "victorpramanik",
+    "password": "iworkindotnet@2020",
+    "database": "three_step_launches",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

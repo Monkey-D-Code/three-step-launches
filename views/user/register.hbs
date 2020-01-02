@@ -1,0 +1,36 @@
+    <section class="hero-area">
+        <div class="register-form">
+            <h1>Join Three Step Launchers</h1>
+            <p>Fill in the details</p>
+            
+            <form method="POST" to='/user/register' novalidate>
+                <input type="text" name="first_name" id="" placeholder="Your First Name" value={{user.first_name}}>
+                <input type="text" name="last_name" id="" placeholder="Your Last Name" value={{user.last_name}}>
+                <input type="email" name="email" id="" placeholder="Enter your Email" value={{user.email}}>
+                <input type="number" name="phone" id="" placeholder="Your Phone Number" min=0 value={{user.phone}}>
+                <input type="url" name="display_image_url" id="" placeholder="Display Image Link" value={{user.display_image_url}}>
+                <input type="password" name="password" id="" placeholder="Chooose A Password" value={{user.password}}>
+                <input type="password" name="confirm_password" id="" placeholder="Confirm Your Password" value={{user.confirm_password}}>
+                <input type="hidden" name="_csrf" value={{csrfToken}}>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        
+    </header>
+</section>
+
+<section>
+    {{#if fieldErrors}}
+        <div class="field-errors">
+            {{#each fieldErrors.errors}}
+                <div class="single-error">
+                    <h4>{{this.param}}</h4>
+                    <p>{{this.msg}}</p>
+                </div>
+                
+            {{/each}}
+        </div>
+    {{/if}}
+</section>
+
+

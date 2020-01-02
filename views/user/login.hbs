@@ -1,0 +1,30 @@
+<section class="hero-area">
+            <h1>Login To </h1>
+            <p>See and view more</p>
+            <section>
+                {{#if fieldErrors}}
+                    <div class="field-errors">
+                        {{#each fieldErrors.errors}}
+                            <div class="single-error">
+                                <h4>{{this.param}}</h4>
+                                <p>{{this.msg}}</p>
+                            </div>
+                            
+                        {{/each}}
+                    </div>
+                {{/if}}
+            </section>
+
+
+
+            <div class="login-form">
+                <form method="POST" to='/user/login' novalidate>
+                    <input type="email" name="email" id="" placeholder="Email" value={{user.email}}>
+                    <input type="password" name="password" id="" placeholder="Password" value={{user.password}}>
+                    <input type="hidden" name="_csrf" value={{csrfToken}}>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            
+        </section>
+    </header>

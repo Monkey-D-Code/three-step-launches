@@ -1,0 +1,16 @@
+.brand{
+    h1{
+        a{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.brand-logo{
+    height : 50px;
+    width : 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+}

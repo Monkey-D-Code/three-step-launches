@@ -1,0 +1,18 @@
+    <section class="hero-area">
+        <iframe 
+            width="300" 
+            height="200"
+            src="https://www.youtube.com/embed/{{video.video_url}}?controls=0" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            aria-controls="hidden"
+            allowfullscreen
+        ></iframe>
+        <h1>{{video.title}}</h1>
+        <p>Are you Sure you want to delete ?</p>
+        <form method="POST" to='/video/{{method.id}}/delete'>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+            <button class="button-2">Delete</button>
+        </form>
+    </section>
+</header>

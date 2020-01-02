@@ -1,0 +1,30 @@
+    <section class="hero-area">
+        <h1>{{#if fromCreate}}Add a new Video{{/if}}{{#if fromUpdate}}Edit Video | {{video.title}}{{/if}}</h1>
+        <p>A video based content | Fill in the blanks</p>
+        {{#if fieldErrors}}
+            <div class="field-errors">
+                {{#each fieldErrors.errors}}
+                    <div class="single-error">
+                        <h4>{{this.param}}</h4>
+                        <p>{{this.msg}}</p>
+                    </div>
+                    
+                {{/each}}
+            </div>
+        {{/if}}
+    </section>
+</header>
+
+<section class="video-form">
+    <form method="POST" to='{{#if fromCreate}}/video/create{{/if}}{{#if fromUpdate}}/video/{{video.id}}/update{{/if}}'>
+        <div class="form-group">
+            <h4>Information</h4>
+            <input type="text" name='title' placeholder="Choose a video title" value="{{video.title}}">
+            <input type="text" name='video_url' placeholder="Paste the video link" value={{video.video_url}}>
+            <textarea name="description" class='text-field' cols="30" rows="10" placeholder="Write about the video">{{video.description}}</textarea>
+            <input type="hidden" name="thumbnail_url" value={{csrfToken}}>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+            <button class="button-2" type='submit'>{{#if fromCreate}}Create{{/if}}{{#if fromUpdate}}Update{{/if}}</button>
+        </div>
+    </form>
+</section>

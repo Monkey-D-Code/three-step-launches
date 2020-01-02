@@ -1,0 +1,32 @@
+.login-form{
+    form{
+        display: flex;
+        flex-flow: column;
+        input{
+            padding : 0.4em 0.6em;
+            font-size: 1.1em;
+            width : 300px;
+            @media (max-width:320px){
+                width : 250px;
+            }
+            margin : 0.5em 0;
+            border : none;
+            font-family: $para_font;
+            color : $bg_color_1;
+            font-weight: bold;
+        }
+        button {
+            width : 300px;
+            @media (max-width:320px){
+                width : 250px;
+            }
+            padding : 0.4em 0.6em;
+            margin : 0.5em 0;
+            font-family: $heading_font;
+            font-size: 1.1em;
+            background-color: darken($bg_color_2,20%);
+            border : none;
+            color: white;
+        }
+    }
+}

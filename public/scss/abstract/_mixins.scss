@@ -1,0 +1,69 @@
+@mixin gradientText {
+    background-image: linear-gradient(
+            to  right,
+            $bg_color_1,
+            darken($bg_color_2,20%),
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    width : fit-content;
+}
+
+@mixin siteInput {
+    width : 300px;
+    @media (max-width : 320px){
+        width : 250px;
+    }
+    margin : 0.5em 0.5em;
+    padding : 0.4em 0.6em;
+    font-family:  $para_font;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none;
+    color : $bg_color_1;
+    -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.51);
+    box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.51);
+    
+}
+
+@mixin btnPrimary{
+    width : 300px;
+    @media (max-width : 320px){
+        width : 250px;
+    }
+    margin : 0.5em 0.5em;
+    padding : 0.4em 0.6em;
+    font-family:  $heading_font;
+    font-size: 1.1em;
+    border: none;
+    background-image: linear-gradient(
+        to right,
+        darken($bg_color_1 , 30%),
+        darken($bg_color_2 , 30%),
+    
+    );
+    color : white;
+    cursor: pointer;
+}
+
+@mixin adminForm {
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .form-group{
+            margin : 1em 0;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            h4{
+                font-family: $heading_font;
+                font-size: 1.2em;
+                color : $bg_color_1;
+            }
+        }
+    }
+}

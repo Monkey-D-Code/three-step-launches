@@ -1,0 +1,10 @@
+    <section class="hero-area">
+        <img src="{{testimonial.display_image_url}}" alt="" style="width:300px;">
+        <h1>{{testimonial.full_name}}</h1>
+        <p>Are you Sure you want to delete ?</p>
+        <form method="POST" to='/testimonial/{{testimonial.id}}/delete'>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+            <button class="button-2">Delete</button>
+        </form>
+    </section>
+</header>

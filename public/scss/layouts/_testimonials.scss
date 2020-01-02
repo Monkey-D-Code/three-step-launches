@@ -1,0 +1,47 @@
+.testimonials{
+    width : 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    h1{
+        @include gradientText;
+        font-size: 3em;
+        a{
+            color: $bg_color_2;
+        }
+    }
+    .testimonial-list{
+        width : 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin : 1em 0;
+        .single-testimonial{
+            margin : 0.5em 0;
+            width : 300px;
+            text-align: center;
+            img{
+                width : 300px;
+                height : 300px;
+                object-fit: cover;
+                border-radius: 50%;
+                border : 4px solid lighten($bg_color_1,10%);
+            }
+            .text{
+                h5{
+                    font-family: $heading_font;
+                    font-size: 1.3em;
+                    color: $bg_color_2;
+                }
+                p{
+                    color : darken($bg_color_1,10%);
+                }
+            }
+
+        }
+    }
+}
+
+.testimonial-form{
+    @include adminForm;
+}

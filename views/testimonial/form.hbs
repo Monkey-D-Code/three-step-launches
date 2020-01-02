@@ -1,0 +1,31 @@
+    <section class="hero-area">
+        <h1>{{#if fromCreate}}Add a new Testimonial{{/if}}{{#if fromUpdate}}Edit Testimonial | {{testimonial.full_name}}{{/if}}</h1>
+        <p>What people say | Fill in the blanks</p>
+        {{#if fieldErrors}}
+            <div class="field-errors">
+                {{#each fieldErrors.errors}}
+                    <div class="single-error">
+                        <h4>{{this.param}}</h4>
+                        <p>{{this.msg}}</p>
+                    </div>
+                    
+                {{/each}}
+            </div>
+        {{/if}}
+    </section>
+</header>
+
+<section class="testimonial-form">
+    <form method="POST" to='{{#if fromCreate}}/testimonial/create{{/if}}{{#if fromUpdate}}/testimonial/{{testimonial.id}}/update{{/if}}'>
+        <div class="form-group">
+            <h4>Information</h4>
+            <input type="text" name='full_name' placeholder="Enter full name" value="{{testimonial.full_name}}">
+            <input type="url" name='display_image_url' placeholder="Paste the image link" value={{testimonial.display_image_url}}>
+            <textarea name="text" class='text-field' cols="30" rows="10" placeholder="What does this user say">{{testimonial.text}}</textarea>
+            
+            <input type="hidden" name="published" value={{true}}>
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+            <button class="button-2" type='submit'>{{#if fromCreate}}Create{{/if}}{{#if fromUpdate}}Update{{/if}}</button>
+        </div>
+    </form>
+</section>

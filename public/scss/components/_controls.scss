@@ -1,0 +1,19 @@
+.controls {
+    width : 300px;
+    margin : 0.5em;
+    display: flex;
+    justify-content: center;
+    font-family: $para_font;
+    a{
+        padding : 0.4em 0.5em;
+        font-weight: bold;
+    }
+    .edit{
+        background-color: darken($bg_color_info,10%);
+
+    }
+    .delete{
+        background-color: $bg_color_warning;
+
+    }
+}
