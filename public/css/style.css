@@ -250,8 +250,7 @@ header {
           font-size: 0.9em;
           padding: 0.4em 0.6em;
           border-radius: 5px;
-          margin: 0.4em;
-          border: 1px solid white; }
+          margin: 0.4em; }
 
 .login-form form {
   display: flex;
